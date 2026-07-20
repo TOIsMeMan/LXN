@@ -12,7 +12,8 @@ final class MainViewController: UIViewController {
     @IBOutlet private weak var tableView: UITableView!
     
     private var items: [String] = [
-        "Issueà 1"
+        "Issue 1",
+        "Issue 3 - Custom View"
     ]
     
     override func viewDidLoad() {
@@ -65,6 +66,9 @@ extension MainViewController: UITableViewDelegate {
         switch indexPath.row {
         case 0:
             let vc = Issue1ViewController()
+            self.navigationController?.pushViewController(vc, animated: true)
+        case 1:
+            let vc = Issue3ViewController()
             self.navigationController?.pushViewController(vc, animated: true)
         default:
             debugPrint("Did tap: \(items[indexPath.row])")
