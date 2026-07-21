@@ -11,23 +11,15 @@ class Issue4ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        drawing(start: CGPoint(x: 0, y: 0), end:CGPoint(x: 500, y: 1000))
+        let lineView = Issue4_2_ViewController(frame: view.bounds)
+        lineView.drawLine(start:CGPoint(x:1,y:1), end: CGPoint(x:1000,y:1000))
+        view.addSubview(lineView)
         // Do any additional setup after loading the view.
     }
-    func drawing(start:CGPoint, end: CGPoint) {
-        let path = UIBezierPath()
-        path.move(to: start)
-        path.addLine(to: end)
-        path.close()
-        
-        let shapeLayer = CAShapeLayer()
-        shapeLayer.strokeColor = UIColor.red.cgColor
-        shapeLayer.lineWidth = 1.0
-        shapeLayer.path = path.cgPath
-        self.view.layer.addSublayer(shapeLayer)
+    
         
         
-    }
+    
 
     /*
     // MARK: - Navigation
