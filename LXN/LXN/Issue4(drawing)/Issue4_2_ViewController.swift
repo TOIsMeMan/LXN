@@ -21,7 +21,7 @@ class Issue4_2_ViewController: UIView {
     private func loadviewfromNib() {
         Bundle.main.loadNibNamed("Issue4_2_ViewController", owner:self, options: nil)
         contentView.frame = self.bounds
-        addSubview(contentView)
+        //addSubview(contentView)
     }
     func drawLine(start: CGPoint, end: CGPoint) {
         let path = UIBezierPath()
@@ -34,6 +34,15 @@ class Issue4_2_ViewController: UIView {
         shapelayer.lineWidth = 1.0
         
         layer.addSublayer(shapelayer)
+    }
+    override func draw(_ rect: CGRect) {
+        let path = createPath()
+        let fillColor = UIColor.red
+        fillColor.setFill()
+        path.fill()
+    }
+    func createPath() -> UIBezierPath {
+        return UIBezierPath(rect: self.bounds)
     }
 }
 
