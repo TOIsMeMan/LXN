@@ -15,6 +15,7 @@ class navViewController: UIViewController {
         let leftButton = UIBarButtonItem(title: "right", style: .plain, target: self, action: #selector(leftAction))
         let searchItem = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: #selector(tap))
         navigationItem.rightBarButtonItems = [searchItem, leftButton]
+        navigationController?.navigationBar.backgroundColor = .blue
         
         // Do any additional setup after loading the view.
     }
