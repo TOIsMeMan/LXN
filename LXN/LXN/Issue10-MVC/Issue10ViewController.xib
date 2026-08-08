@@ -64,6 +64,15 @@
                         <action selector="plusBtnTapped:" destination="-1" eventType="touchUpInside" id="iMR-h0-SUr"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XFu-PH-Aqz">
+                    <rect key="frame" x="123" y="462" width="32" height="39"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="-"/>
+                    <connections>
+                        <action selector="minusBtnTapped:" destination="-1" eventType="touchUpInside" id="cNN-zM-bKw"/>
+                    </connections>
+                </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sc3-0a-L12">
                     <rect key="frame" x="212" y="463" width="32" height="39"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -80,15 +89,6 @@
                     <buttonConfiguration key="configuration" style="plain" title="/"/>
                     <connections>
                         <action selector="divBtnTapped:" destination="-1" eventType="touchUpInside" id="kAf-EA-Sa8"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XFu-PH-Aqz">
-                    <rect key="frame" x="123" y="462" width="32" height="39"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="plain" title="-"/>
-                    <connections>
-                        <action selector="minusBtnTapped:" destination="-1" eventType="touchUpInside" id="cNN-zM-bKw"/>
                     </connections>
                 </button>
             </subviews>
