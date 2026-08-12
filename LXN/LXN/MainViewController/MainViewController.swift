@@ -16,7 +16,8 @@ final class MainViewController: UIViewController {
         "Issue 3 - Custom View",
         "Issue 9 - Navigation ViewController",
         "Issue 10 - MVC",
-        "Issue 11 - Table View"
+        "Issue 11 - Table View",
+        "Issue 12 - Custom Cell"
     ]
     
     override func viewDidLoad() {
@@ -81,6 +82,9 @@ extension MainViewController: UITableViewDelegate {
             self.navigationController?.pushViewController(vc, animated: true)
         case 4:
             let vc = Issue11ViewController()
+            self.navigationController?.pushViewController(vc, animated: true)
+        case 5:
+            let vc = Issue12ViewController()
             self.navigationController?.pushViewController(vc, animated: true)
         default:
             debugPrint("Did tap: \(items[indexPath.row])")
