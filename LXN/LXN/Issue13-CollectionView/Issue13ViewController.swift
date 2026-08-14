@@ -15,6 +15,8 @@ class Issue13ViewController: UIViewController {
         
         let nib = UINib(nibName: "CollectionViewCell", bundle: .main)
         Bang.register(nib, forCellWithReuseIdentifier: "cell")
+        let headerNib = UINib(nibName: "CollectionReusableView", bundle: .main)
+        Bang.register(headerNib, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "header")
         
         Bang.dataSource = self
         Bang.delegate = self
@@ -45,12 +47,56 @@ class Issue13ViewController: UIViewController {
     */
 
 }
-extension Issue13ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
+extension Issue13ViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        users.count
+        return users.count
     }
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CollectionViewCell
+        
+        let cell = collectionView.dequeueReusableCell(
+            withReuseIdentifier: "cell",
+            for: indexPath
+        ) as! CollectionViewCell
+        
         return cell
+    }
+    
+    func collectionView(
+        _ collectionView: UICollectionView,
+        layout collectionViewLayout: UICollectionViewLayout,
+        referenceSizeForHeaderInSection section: Int
+    ) -> CGSize {
+        
+        return CGSize(
+            width: Bang.frame.width,
+            height: 50
+        )
+    }
+    
+    func collectionView(
+        _ collectionView: UICollectionView,
+        viewForSupplementaryElementOfKind kind: String,
+        at indexPath: IndexPath
+    ) -> UICollectionReusableView {
+        
+        switch kind {
+        case UICollectionView.elementKindSectionHeader:
+            
+            let reusableview = Bang.dequeueReusableSupplementaryView(
+                ofKind: UICollectionView.elementKindSectionHeader,
+                withReuseIdentifier: "header",
+                for: indexPath
+            ) as! CollectionReusableView
+            
+           
+            reusableview.totalLbl.text = "\(users.count)"
+            
+            return reusableview
+            
+        default:
+            fatalError("Unexpected element kind")
+        }
     }
 }
