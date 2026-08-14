@@ -70,7 +70,7 @@ extension Issue12ViewController: UITableViewDataSource, UITableViewDelegate {
     }
         func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! HomeCell
-            var user = users[indexPath.row]
+            let user = users[indexPath.row]
             cell.nameLbl.text = user.name
             cell.subtitleLbl.text = user.name
             
