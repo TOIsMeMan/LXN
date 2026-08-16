@@ -18,7 +18,8 @@ final class MainViewController: UIViewController {
         "Issue 10 - MVC",
         "Issue 11 - Table View",
         "Issue 12 - Custom Cell",
-        "Issue 13 - Collection View"
+        "Issue 13 - Collection View",
+        "Issue 14 - Tabbar Controller"
     ]
     
     override func viewDidLoad() {
@@ -46,6 +47,30 @@ extension MainViewController {
     }
 }
 
+// MARK: - Tabbar Create
+func CreateTabBarController() -> UITabBarController {
+    let homeVC = HomeViewController(nibName: "HomeViewController", bundle: nil)
+    let homeNav = UINavigationController(rootViewController: homeVC)
+    homeNav.tabBarItem = UITabBarItem(title: "Home", image: UIImage(systemName: "house"), tag: 0)
+    let profileVC = ProfileViewController(nibName: "ProfileViewController", bundle: nil)
+    let profileNav = UINavigationController(rootViewController: profileVC)
+    profileNav.tabBarItem = UITabBarItem(title: "Profile", image: UIImage(systemName: "person"), tag: 0)
+    let messagesVC = MessagesViewController(nibName: "MessagesViewController", bundle: nil)
+    let messagesNav = UINavigationController(rootViewController: messagesVC)
+    messagesNav.tabBarItem = UITabBarItem(title: "Messages", image: UIImage(systemName: "text.bubble.fill"), tag: 0)
+    let friendsVC = FriendsViewController(nibName: "FriendsViewController", bundle: nil)
+    let friendsNav = UINavigationController(rootViewController: friendsVC)
+    friendsNav.tabBarItem = UITabBarItem(title: "Friends", image: UIImage(named:"profile"), selectedImage: UIImage(named: "profile-selected"))
+    friendsNav.tabBarItem.badgeValue = "phuk"
+    friendsNav.tabBarItem.badgeColor = .systemRed
+    let tabBarController = UITabBarController()
+    tabBarController.viewControllers = [homeNav, profileNav, messagesNav, friendsNav]
+    if #available(iOS 26.0, *) {
+        tabBarController.tabBarMinimizeBehavior = .never
+    }
+    return tabBarController
+
+}
 // MARK: - UITableViewDataSource
 extension MainViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -62,6 +87,7 @@ extension MainViewController: UITableViewDataSource {
         return cell
     }
 }
+
 
 // MARK: - UITableViewDelegate
 extension MainViewController: UITableViewDelegate {
@@ -90,6 +116,8 @@ extension MainViewController: UITableViewDelegate {
         case 6:
             let vc = Issue13ViewController()
             self.navigationController?.pushViewController(vc, animated: true)
+        case 7:
+            self.navigationController?.pushViewController(CreateTabBarController(), animated: true)
         default:
             debugPrint("Did tap: \(items[indexPath.row])")
         }
