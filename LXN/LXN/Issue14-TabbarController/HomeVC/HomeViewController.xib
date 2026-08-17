@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="LXN" customModuleProvider="target">
             <connections>
+                <outlet property="homeLbl" destination="uNE-L0-7zq" id="dbQ-k3-9d0"/>
                 <outlet property="view" destination="iN0-l3-epB" id="hAs-CR-NNG"/>
             </connections>
         </placeholder>
@@ -19,9 +20,8 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uNE-L0-7zq">
-                    <rect key="frame" x="175" y="416" width="46" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uNE-L0-7zq">
+                    <rect key="frame" x="173.66666666666666" y="415.66666666666669" width="46" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -29,6 +29,10 @@
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="uNE-L0-7zq" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="TN1-yo-ifh"/>
+                <constraint firstItem="uNE-L0-7zq" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="j61-Cn-zSX"/>
+            </constraints>
             <point key="canvasLocation" x="138" y="107"/>
         </view>
     </objects>

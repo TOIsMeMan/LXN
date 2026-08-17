@@ -19,7 +19,8 @@ final class MainViewController: UIViewController {
         "Issue 11 - Table View",
         "Issue 12 - Custom Cell",
         "Issue 13 - Collection View",
-        "Issue 14 - Tabbar Controller"
+        "Issue 14 - Tabbar Controller",
+        "Issue 15 - MVVM - Login"
     ]
     
     override func viewDidLoad() {
@@ -46,7 +47,6 @@ extension MainViewController {
         tableView.dataSource = self
     }
 }
-
 // MARK: - Tabbar Create
 func CreateTabBarController() -> UITabBarController {
     let homeVC = HomeViewController(nibName: "HomeViewController", bundle: nil)
@@ -118,6 +118,10 @@ extension MainViewController: UITableViewDelegate {
             self.navigationController?.pushViewController(vc, animated: true)
         case 7:
             self.navigationController?.pushViewController(CreateTabBarController(), animated: true)
+        case 8:
+            let vc = LoginViewController()
+            let loginNav = UINavigationController(rootViewController: vc)
+            self.view.window?.rootViewController = loginNav
         default:
             debugPrint("Did tap: \(items[indexPath.row])")
         }

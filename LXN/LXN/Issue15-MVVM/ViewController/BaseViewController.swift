@@ -1,5 +1,5 @@
 //
-//  HomeViewController.swift
+//  BaseViewController.swift
 //  LXN
 //
 //  Created by Macbook on 16/8/26.
@@ -7,30 +7,18 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
-   
-    @IBOutlet weak var homeLbl: UILabel!
-    var viewModel = HomeViewModel()
+class BaseViewController: UIViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "home"
-        fetchData()
+        
+        setupUI()
+        setupData()
         // Do any additional setup after loading the view.
     }
-    func updateUI() {
-        homeLbl.text = viewModel.email
+    func setupUI() {
     }
-    func fetchData() {
-        viewModel.fetchData() { (done,email,password) in
-            if done {
-                self.updateUI()
-            } else {
-                print("m code ngu vl thg cho")
-            }
-                
-            
-        }
-      
+    func setupData(){
     }
 
     /*
