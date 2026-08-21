@@ -60,7 +60,7 @@ extension Issue16ViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell16", for: indexPath) as! Issue16TableViewCell
-        
+        cell.namesLbl.text = viewmodel.names[indexPath.row]
         return cell
     }
 }
