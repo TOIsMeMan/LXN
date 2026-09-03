@@ -6,8 +6,15 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		83E2B6EDA19D3452D5A1559A /* Pods_LXN.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B88FE2F500C9CAA8287AD36 /* Pods_LXN.framework */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		049C70D42FFA9D9800BE3877 /* LXN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LXN.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B88FE2F500C9CAA8287AD36 /* Pods_LXN.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LXN.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C666DD4D54F1B8F41B1C54CB /* Pods-LXN.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LXN.release.xcconfig"; path = "Target Support Files/Pods-LXN/Pods-LXN.release.xcconfig"; sourceTree = "<group>"; };
+		D262A1BFCD02DB0B26AE5088 /* Pods-LXN.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LXN.debug.xcconfig"; path = "Target Support Files/Pods-LXN/Pods-LXN.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -36,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83E2B6EDA19D3452D5A1559A /* Pods_LXN.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,6 +55,8 @@
 			children = (
 				049C70D62FFA9D9800BE3877 /* LXN */,
 				049C70D52FFA9D9800BE3877 /* Products */,
+				5396F4656A3FC6E65FFBF11F /* Pods */,
+				5E7B9E3D6DA378D63854FE93 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +68,23 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		5396F4656A3FC6E65FFBF11F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D262A1BFCD02DB0B26AE5088 /* Pods-LXN.debug.xcconfig */,
+				C666DD4D54F1B8F41B1C54CB /* Pods-LXN.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		5E7B9E3D6DA378D63854FE93 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2B88FE2F500C9CAA8287AD36 /* Pods_LXN.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -65,6 +92,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 049C70EA2FFA9D9A00BE3877 /* Build configuration list for PBXNativeTarget "LXN" */;
 			buildPhases = (
+				CBE964C9250368A0ECA5A43A /* [CP] Check Pods Manifest.lock */,
 				049C70D02FFA9D9800BE3877 /* Sources */,
 				049C70D12FFA9D9800BE3877 /* Frameworks */,
 				049C70D22FFA9D9800BE3877 /* Resources */,
@@ -77,8 +105,6 @@
 				049C70D62FFA9D9800BE3877 /* LXN */,
 			);
 			name = LXN;
-			packageProductDependencies = (
-			);
 			productName = LXN;
 			productReference = 049C70D42FFA9D9800BE3877 /* LXN.app */;
 			productType = "com.apple.product-type.application";
@@ -127,6 +153,31 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		CBE964C9250368A0ECA5A43A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LXN-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		049C70D02FFA9D9800BE3877 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -140,6 +191,7 @@
 /* Begin XCBuildConfiguration section */
 		049C70EB2FFA9D9A00BE3877 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D262A1BFCD02DB0B26AE5088 /* Pods-LXN.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -172,6 +224,7 @@
 		};
 		049C70EC2FFA9D9A00BE3877 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C666DD4D54F1B8F41B1C54CB /* Pods-LXN.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
