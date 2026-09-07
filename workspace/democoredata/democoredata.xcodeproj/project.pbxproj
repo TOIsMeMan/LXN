@@ -6,14 +6,7 @@
 	objectVersion = 77;
 	objects = {
 
-/* Begin PBXBuildFile section */
-		FA5E0BE830497AFD00B45360 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5E0BE630497AFD00B45360 /* User+CoreDataClass.swift */; };
-		FA5E0BE930497AFD00B45360 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5E0BE730497AFD00B45360 /* User+CoreDataProperties.swift */; };
-/* End PBXBuildFile section */
-
 /* Begin PBXFileReference section */
-		FA5E0BE630497AFD00B45360 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "User+CoreDataClass.swift"; path = "democoredata/Models/Objects/User+CoreDataClass.swift"; sourceTree = "<group>"; };
-		FA5E0BE730497AFD00B45360 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "User+CoreDataProperties.swift"; path = "democoredata/Models/Objects/User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		FA7D0B8E30497249007A132F /* democoredata.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = democoredata.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -52,8 +45,6 @@
 		FA7D0B8530497249007A132F = {
 			isa = PBXGroup;
 			children = (
-				FA5E0BE630497AFD00B45360 /* User+CoreDataClass.swift */,
-				FA5E0BE730497AFD00B45360 /* User+CoreDataProperties.swift */,
 				FA7D0B9030497249007A132F /* democoredata */,
 				FA7D0B8F30497249007A132F /* Products */,
 			);
@@ -141,8 +132,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA5E0BE830497AFD00B45360 /* User+CoreDataClass.swift in Sources */,
-				FA5E0BE930497AFD00B45360 /* User+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
